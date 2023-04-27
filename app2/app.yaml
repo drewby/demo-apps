@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: app2
-          image: hello-world:latest
+          image: busybox
+          command: ["/bin/sh", "-c", "tail -f /dev/null"]
           ports:
             - containerPort: 8080
